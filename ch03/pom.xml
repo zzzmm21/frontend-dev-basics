@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.bitacademy</groupId>
-		<artifactId>fronted-dev-basics</artifactId>
+		<artifactId>frontend-dev-basics</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>ch03</artifactId>
