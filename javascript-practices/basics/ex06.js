@@ -1,28 +1,60 @@
 /*
-구문(Statement)
+자바스크립트 객체I: object 타입
 
-
-1. 구문은 실행 단위 
-2. 구문의 구성 요소
-   표현식: 값, 연산자, 변수, 함수 호출
-
-3. 구문의예 
-    -- 주석구문
-    -- if(1-1){....}
-    -- if ~ else 
-    -- for, while ,do ~ while, for~in
-    -- switch
-4. 세미콜론(;)
-    - 표현식을 표현식문으로 만들어서 표현식을 실행하게 한다.
-
-5. 개행
-    1. 세미콜론 역활을 할때도 있다.
-    2. 스페이스 역활을 할때 도 있다.(token를 분리하는 역활)
+1. 자바스크립트 객체는 object 타입과 function 타입이 있다.
+2. 보통 , function 타입객체는 '함수'라 부른다.
+3. 따라서 자바스크립트에서 우리가 흔히 객체라고 부르는 것은 object 타입의 객체라고 볼 수 있다.
 */
 
-    i = 10; j = 20; k = 30;
-    // 개행의 역할
-    s = "hello world"
-    console.log(s)
-    // 개행의 역할: token을 분리하는 역할
-   
+
+// 생성방법1
+// 생성자 함수를 사용하는 방법
+// Object, Number, String , RegExp, Array - 내장객체(내장 생성자 함수)
+
+var o1 = new Object();
+o1.name = "둘리";
+o1.age = 10;
+o1.another = new Object();
+o1.another.name = "마이콜";
+o1.another.age = 30;
+
+console.log(o1);
+
+// 사용자 생성자 강추
+var MyObject = function(name){
+    this.name = name;
+
+}
+var o2 = new MyObject("kim");
+
+console.log(o2);
+
+// 생성방법2
+// {} 리터럴을 사용하는 방법
+var o3 = {};
+o3.name = "둘리";
+o3.age = 10;
+o3.another = new Object();
+o3.another.name = "마이콜";
+o3.another.age = 30;
+
+console.log(o3);
+
+// 생성방법3
+// JavaScript (O)bject (N)otation
+var o4 = {
+    name: "둘리",
+    age: 10,
+    another: {
+        name: "마이콜",
+        age: 30
+    }
+}
+console.log(o4);
+
+// xmlHttpRequest 객체를 사용해서
+// 통신(AJAX) 에서 데이터 교환 포멧으로 JSON을 사용한다.
+var response = '{"name": "둘리", "email": "dooly@gmail.com"}';
+var o = JSON.parse(response);
+console.log(o);
+
