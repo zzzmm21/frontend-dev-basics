@@ -64,5 +64,5 @@ console.log(a1);
 // splice: 4. insertAt() 처럼 작동
 console.log("== removeAt() 처럼 작동 ====");
 var a1 = [0, 1, 2, 3, 4];
-a1.splice(1, 0, 10);
+a1.splice(1, 0, 10); // a1.insertAt(1, 10)
 console.log(a1);
