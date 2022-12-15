@@ -3,6 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+window.onload = function(){
+	setTimeout(function(){	
+		var imgElement = document.createElement("img");
+		imgElement.src = "https://blog.kakaocdn.net/dn/0mySg/btqCUccOGVk/nQ68nZiNKoIEGNJkooELF1/img.jpg"
+		imgElement.style.width = "200px";
+		imgElement.alt ="루피만세~";
+		imgElement.title= "루피만세";
+		document.body.appendChild(imgElement);
+	}, 2000);	
+}
+</script>
+
+
 </head>
 <body>
 	<h1 id='h' data-no='10'>DOM(Document Object Model)</h1>
