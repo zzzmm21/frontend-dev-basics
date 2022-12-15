@@ -12,9 +12,12 @@ window.onload = function(){
 	//2. Tag Name
 	var h4s = document.getElementsByTagName("h4");
 	//3. Class Name
-
+	var h5s = document.getElementsByClassName("header");
 	
 	//4. CSS Selector(선택)
+	var header07 = document.querySelector("#header-07");
+	
+	var h6s = document.querySelectorAll(".header2");
 	
 	setTimeout(function(){
 		header01.innerText += 'by getElementById()';
@@ -23,6 +26,13 @@ window.onload = function(){
 		h4s[0].innerText += 'by getElementsByTagName()';
 		h4s[1].innerText += 'by getElementsByTagName()';
 		
+		h4s[0].innerText += 'by getElementsByClassName()';
+		h4s[1].innerText += 'by getElementsByClassName()';
+		
+		header07.innerText +='by querySelector()';
+		
+		h6s[0].innerText +='by querySelectorAll()';
+		h6s[1].innerText +='by querySelectorAll()';
 	}, 2000);
 }
 </script>
