@@ -11,6 +11,20 @@ console.log(window.n , n);
 var email ="zzzmm21@naver.com";
 console.log(window.email, email);
 
+//팝업창
+setTimeout(function(){
+	var child = window.open("popup.html", "popup", "width-600, hegiht=400");
+	
+	setTimeout(function(){
+		// 자식창의 내용바꾸기.
+		child.document.write("<h1>popup contents changed</h1>")
+	}, 2000);
+
+	setTimeout(function(){
+		// child(자식창의 window 객체)이동
+		child.moveTo(200, 200);
+	}, 4000);
+},2000);
 </script>
 </head>
 <body>
@@ -18,8 +32,9 @@ console.log(window.email, email);
 	<h1>BOM(Browser Object Model)</h1>
 	<h2>1. window 전역 객체(Global Object)</h2>
 	<ul>
-		<li>자바스크립트가 브라우저 창(window)을 제어하기 위한 객체</li>
-		<li>자바스크립트 실행과 관련된 환경 정보에 접근이 가능한 객체(Environments, Variable Object)</li>		
+		<li>1. 자바스크립트 실행과 관련된 환경 정보에 접근이 가능한 객체(Environments, Variable Object)</li>		
+		<li>2. 자바스크립트가 브라우저 창(window)을 제어하기 위한 객체</li>
+		
 	</ul>
 </body>
 </body>
